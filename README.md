@@ -250,6 +250,19 @@ passwd GraceHopper1906
 passwd -e codi
 ```
 
+To give both users sudo permissions, I needed to update the `/etc/sudoers` file
+
+```
+root ALL=(ALL) ALL
+%wheel ALL=(ALL) ALL
+```
+I then run the `usermod` command for any user that I wish to give sudo permissions to.
+```zsh
+usermod -aG wheel sean
+usermod -aG wheel codi
+```
+This command adds the users to wheel group. The wheel group has sudo permissions.
+
 ---
 
 ## 1.11) Configuring the terminal to look cool
@@ -283,6 +296,15 @@ Host gateway
 	Hostname 129.244.245.111
 	User sysadmin
 ```
+The `bira` theme that I am using in my terminal also comes with dozens of pre-installed aliases for a variety of purposes ranging from easier changing of directories to simplifying git commands:
+```zsh
+g=git
+ga='git add'
+gam='git am'
+...=../..
+....=../../..
+```
+The dot aliases extend the native `cd ..` command to go back to parent directories. These aliases allow for you to go deep backwards into the hierarchy if you want to.
 
 ---
 
