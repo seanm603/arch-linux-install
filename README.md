@@ -69,7 +69,7 @@ mount /dev/sda2 /mnt
 mount --mkdir /dev/sda1 /mnt/boot
 ```
 
-You are almost. Don't worry.
+You are almost done. Don't worry.
 
 ---
 
@@ -330,5 +330,47 @@ systemctl enable sshd
 ssh sysadmin@129.244.245.111
 # asks to store fingerprint of host
 # asks for password (suYqs9YuxR43)
-
 ```
+
+## Installing Minecraft (AUR package)
+This was the hardest most annoying part of the project.
+I had to first install the `base-devel` package to allow me to run `makepkg`. I then needed to install `yay` and use `yay` to install `octopi`. I decided on installing octopi because it is currently the highest rated package on the site and seemed like it would be a good option to include. 
+```zsh
+sudo pacman -S base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S octopi
+```
+---
+
+Now you are done. All in one singular step. Enjoy Arch. 
+
+## Screenshots to show my Arch works
+
+### GUI
+See my GUI.
+![Alt text](images/GUI.png)
+
+### User List
+Look at my users.
+![Alt text](images/UsersList.png)
+### Sudoers
+The users can sudo.
+![Alt text](images/Sudoers.png)
+### Aliases
+I have aliases. This is one of them.
+Notice I am deeply branched into a folder.
+![Alt text](images/ShowingAlias.png)
+Now watch as I traverse backwards rapidly using my `cd ...` alias
+![Alt text](images/showOffAlias.png)
+### SSH into gateway
+I can SSH.
+![Alt text](images/ssh.png)
+### Browser
+I can browse.
+![Alt text](images/webBrowser.png)
+### Octopi (AUR package)
+I have a gui interface for pacman (the package manager).
+![alt text](images/octopi.png)
+
