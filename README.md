@@ -284,7 +284,7 @@ I used a framework called `oh-my-zsh` to make all of my customizations because i
 pacman -S git
 curl -L http://install.ohmyz.sh | sh
 ```
-I needed git to be able to clone the repository with all of the framework files. I then used `curl` to install the framework. I chose `bira` as my template because it has a good coloring scheme and I like the way it looks.
+I needed git to be able to clone the repository with all of the framework files. I then used `curl` to install the framework. I chose `bira` as my template because it has a good coloring scheme and I like the way it looks. `.oh-my-zsh` installs a custom `.zshrc` file that you can go through and update to completely costumize your terminal. I udated the `THEME` variable in the file to change my terminal's theme to `bira`. 
 
 ### 1.11.3) Aliasing
 ```zsh
@@ -332,7 +332,7 @@ ssh sysadmin@129.244.245.111
 # asks for password (suYqs9YuxR43)
 ```
 
-## Installing Minecraft (AUR package)
+## Installing Octopi (AUR package)
 This was the hardest most annoying part of the project.
 I had to first install the `base-devel` package to allow me to run `makepkg`. I then needed to install `yay` and use `yay` to install `octopi`. I decided on installing octopi because it is currently the highest rated package on the site and seemed like it would be a good option to include. 
 ```zsh
